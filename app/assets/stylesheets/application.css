@@ -10,8 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require social-share-button
  *= require_tree .
  *= require_self
  */
 
+.inline{
+    /*display: inline;*/
+    /*position: relative;*/
 
+    display: inline-block;
+
+}
+
+
+a {
+    /*display: inline;*/
+    display: inline;
+    clear: none;
+}

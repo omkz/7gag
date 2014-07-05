@@ -5,12 +5,17 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title"><%= post.title %></h3>
+        <small>posted by : xxxxx </small>
       </div>
       <div class="panel-body">
         <%# post.body %> <br />
         <%= image_tag post.meme.url %>
       </div>
-      <div class="panel-footer">Panel footer</div>
+      <div class="panel-footer">
+        <%= link_to "comments", class: 'inline' %>
+        <%= social_share_button_tag(post.title) %>
+
+      </div>
     </div>
 
 <% end %>
