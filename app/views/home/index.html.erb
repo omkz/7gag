@@ -1,2 +1,17 @@
 <!--<h2>Selamat Datang di Ngakak.com</h2>-->
 <!--<p>Selamat menikmati beragam lelucon disini</p>-->
+
+<% Post.all.each do |post| %>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= post.title %></h3>
+      </div>
+      <div class="panel-body">
+        <%= post.body %>
+        <%= image_tag post.meme.url %>
+      </div>
+      <div class="panel-footer">Panel footer</div>
+    </div>
+
+<% end %>
+
