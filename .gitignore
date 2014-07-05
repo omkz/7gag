@@ -21,6 +21,7 @@ doc/
 /log/*.log
 
 public/assets/
+public/system/
 
 
 .sass-cache
