@@ -14,4 +14,10 @@
  *= require_self
  */
 
+.meme{
+    max-width: 300px;
+    max-height: auto;
+
+}
+
 
