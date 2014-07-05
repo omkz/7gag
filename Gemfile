@@ -47,3 +47,7 @@ gem 'devise'
 gem "paperclip", "~> 4.1"
 
 gem 'social-share-button'
+
+group :development do
+  gem 'brakeman', :require => false
+end
