@@ -12,8 +12,9 @@
         <%= image_tag post.meme.url %>
       </div>
       <div class="panel-footer">
-        <%= link_to "comments", class: 'inline' %>
+        <%# link_to "comments", class: 'inline' %>
         <%= social_share_button_tag(post.title) %>
+	   <%= commontator_thread(post) %>
 
       </div>
     </div>
