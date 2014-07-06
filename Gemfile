@@ -54,4 +54,6 @@ end
 
 # gem 'thumbs_up'
 
-gem 'commontator', '~> 4.6.0'
+# gem 'commontator', '~> 4.6.0'
+
+gem 'acts_as_commentable_with_threading'
