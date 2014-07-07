@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <strong><%= @post.title %></strong>
+ </h3>
+  </div>
+  <div class="panel-body">
+    <%= image_tag @post.meme.url %>
+
+  </div>
+  <div class="panel-footer"> <%= social_share_button_tag(@post.title) %></div>
+</div>
+
+<%= render partial: "comments/form"%>
+<%= render partial: 'comments/comment', :collection => @old_comments, :as => :comment %>
+
+
+

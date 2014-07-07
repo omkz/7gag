@@ -1,11 +1,9 @@
-<!--<h2>Selamat Datang di Ngakak.com</h2>-->
-<!--<p>Selamat menikmati beragam lelucon disini</p>-->
 
 <% Post.all.each do |post| %>
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title"><%= post.title %></h3>
-        <small>posted by : xxxxx </small>
+        <small>posted by : <%= post.user.email %></small>
       </div>
       <div class="panel-body">
         <%# post.body %> <br />
@@ -14,8 +12,7 @@
       <div class="panel-footer">
         <%# link_to "comments", class: 'inline' %>
         <%= social_share_button_tag(post.title) %>
-
-
+	   <%= link_to "comments", post  %>
       </div>
     </div>
 

@@ -56,4 +56,8 @@ end
 
 # gem 'commontator', '~> 4.6.0'
 
-gem 'acts_as_commentable_with_threading'
+# gem 'acts_as_commentable_with_threading'
+
+gem 'acts_as_commentable_with_threading', git: "https://github.com/vinnividivicci/acts_as_commentable_with_threading.git"
+
+gem 'simple_form'
