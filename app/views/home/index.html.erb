@@ -1,11 +1,11 @@
 
-<% Post.all.each do |post| %>
+<% @posts.each do |post| %>
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title"><%= post.title %></h3>
         <small>posted by : <%= post.user.email %></small>
       </div>
-      <div class="panel-body">
+      <div class="panel-body" style="overflow: auto;  max-height: 500;">
         <%# post.body %> <br />
         <%= image_tag post.meme.url %>
       </div>

@@ -52,7 +52,7 @@ group :development do
   gem 'brakeman', :require => false
 end
 
-# gem 'thumbs_up'
+gem 'thumbs_up'
 
 # gem 'commontator', '~> 4.6.0'
 

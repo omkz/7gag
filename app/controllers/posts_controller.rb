@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
 
     @post.save
-    redirect_to root_path
+    redirect_to @post
   end
   
   def show
