@@ -2,7 +2,13 @@ Rails.application.routes.draw do
  
   get 'comments/index'
 
-  resources :posts
+  # resources :posts
+
+  resources :posts do
+    member do
+      post :vote_up
+    end
+  end
   
   devise_for :users
   

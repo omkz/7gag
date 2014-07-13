@@ -11,6 +11,8 @@
       </div>
       <div class="panel-footer">
         <%# link_to "comments", class: 'inline' %>
+        <%= link_to('vote for this post!', vote_up_post_path(post), :method => :post) %>
+        <%# link_to "vote down" %>
         <%= social_share_button_tag(post.title) %>
 	   <%= link_to "comments", post  %>
       </div>
