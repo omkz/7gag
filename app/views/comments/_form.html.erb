@@ -1,12 +1,11 @@
 
-
 <div class="panel panel-default">
 <div class="panel-heading">
   <h3 class="panel-title"> <strong>my comment : </strong>
   </h3>
 </div>
 <div class="panel-body">
-  <%=  simple_form_for @comment do |f| %>
+  <%=  simple_form_for @comment, remote: true do |f| %>
       <%=  f.input :body, :input_html => { :rows => "4", :cols => "60" }, :label => false %>
       <%=  f.input :commentable_id, :as => :hidden, :value => @comment.commentable_id %>
       <%=  f.input :commentable_type, :as => :hidden, :value => @comment.commentable_type %>

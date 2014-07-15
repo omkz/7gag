@@ -13,7 +13,11 @@
 </div>
 
 <%= render partial: "comments/form"%>
+
+<div id="comments">
 <%= render partial: 'comments/comment', :collection => @old_comments, :as => :comment %>
+</div>
+
 
 
 
