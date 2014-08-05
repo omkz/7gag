@@ -61,3 +61,5 @@ gem 'thumbs_up'
 gem 'acts_as_commentable_with_threading', git: "https://github.com/vinnividivicci/acts_as_commentable_with_threading.git"
 
 gem 'simple_form'
+
+ruby "2.1.2"

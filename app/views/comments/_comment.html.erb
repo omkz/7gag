@@ -1,11 +1,14 @@
 <%# @old_comments.each do |comment| %>
-    <div class="media" style="background-color: white; padding: 5px ">
-      <a class="pull-left" href="#">
-        <img class="media-object" src="/assets/monki64.png" alt="...">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">posted by : <%= comment.user.email %> </h4>
-        <%= comment.body %> <br />
-      </div>
-    </div>
+<div class="media" style="background-color: white; padding: 5px ">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="/assets/monki64.png" alt="...">
+  </a>
+
+  <div class="media-body">
+    <h4 class="media-heading">posted by : <%= comment.user.email %> </h4>
+    <%= comment.body %> <br/>
+  </div>
+</div>
 <%# end %>
+
+
