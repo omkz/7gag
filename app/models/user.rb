@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   # Each question has a submitter_id column that tracks the user who submitted it.
   # The option :weight value will be multiplied to any karma from that voteable model (defaults to 1).
   # You can track any voteable model.
-  has_karma :posts, :as => :user, :weight => 0.5
+  # has_karma :posts, :as => :user, :weight => 0.5
   # Karma by default is only calculated from upvotes. If you pass an array to the weight option, you can count downvotes as well (below, downvotes count for half as much karma against you):
-  # has_karma :posts, :as => :user, :weight => [ 1, 0.5 ]
+  has_karma :posts, :as => :user, :weight => [ 1, 0.5 ]
 
 end
