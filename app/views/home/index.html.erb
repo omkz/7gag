@@ -10,9 +10,10 @@
         <%= image_tag post.meme.url %>
       </div>
       <div class="panel-footer">
-        <%# link_to "comments", class: 'inline' %>
-        <%= link_to('vote for this post!', vote_up_post_path(post), :method => :post) %>
-        <%# link_to "vote down" %>
+        <%= link_to('vote up!', vote_up_post_path(post), :method => :post, :remote => true) %>
+        <%= link_to('vote down!', vote_down_post_path(post), :method => :post, :remote => true) %>
+        <%# link_to image_tag('thumb_up.png', height: '10%', width: '10%'), vote_up_post_path(post),method: post %>
+        <%# link_to image_tag('thumb_down.png', height: '10%', width: '10%'), vote_down_post_path(post),method: post, :remote => true %>
         <%= social_share_button_tag(post.title) %>
 	   <%= link_to "comments", post  %>
       </div>

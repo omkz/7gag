@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts do
     member do
       post :vote_up
+      post :vote_down
     end
   end
   

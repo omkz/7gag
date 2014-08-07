@@ -38,17 +38,17 @@ class CommentsController < ApplicationController
     #   format.json { render json: @comment.errors, status: :unprocessable_entity }
     # end
 
-    if @comment.save
-      # redirect_to root_path
-      flash[:notice] = "comment created successfully";
-    else
-      # redirect_to root_path
-    end
+    # if @comment.save
+    #   # redirect_to root_path
+    #   flash[:notice] = "comment created successfully";
+    # else
+    #   # redirect_to root_path
+    # end
 
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @comment, notice: 'Article was successfully created.' }
-        format.js {}
+        format.js { }
         format.json { render action: 'show', status: :created, location: @comment }
       else
         format.html { render action: 'new' }
