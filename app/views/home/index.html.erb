@@ -1,4 +1,3 @@
-
 <% @posts.each do |post| %>
     <div class="panel panel-info">
       <div class="panel-heading">
@@ -6,16 +5,18 @@
         <small>posted by : <%= post.user.email %></small>
       </div>
       <div class="panel-body" style="overflow: auto;  max-height: 500;">
-        <%# post.body %> <br />
+        <%# post.body %> <br/>
         <%= image_tag post.meme.url %>
       </div>
       <div class="panel-footer">
-        <%= link_to('vote up!', vote_up_post_path(post), :method => :post, :remote => true) %>
-        <%= link_to('vote down!', vote_down_post_path(post), :method => :post, :remote => true) %>
+        <%= link_to('vote up!', vote_up_post_path(post), :method => :post, :remote => true, class: 'btn btn-success btn-xs') %>
+        <%= link_to('vote down!', vote_down_post_path(post), :method => :post, :remote => true, class: 'btn btn-danger btn-xs') %>
         <%# link_to image_tag('thumb_up.png', height: '10%', width: '10%'), vote_up_post_path(post),method: post %>
         <%# link_to image_tag('thumb_down.png', height: '10%', width: '10%'), vote_down_post_path(post),method: post, :remote => true %>
+
+        <%= link_to "comments", post, class: 'btn btn-primary btn-xs' %>
+        <br /> <br />
         <%= social_share_button_tag(post.title) %>
-	   <%= link_to "comments", post  %>
       </div>
     </div>
 
