@@ -63,3 +63,5 @@ gem 'acts_as_commentable_with_threading', git: "https://github.com/vinnividivicc
 gem 'simple_form'
 
 ruby "2.1.2"
+
+gem 'rails_12factor', group: :production
