@@ -64,6 +64,6 @@ gem 'simple_form'
 
 gem 'rails_12factor', group: :production
 
-gem 'unicorn'
-
 ruby "2.1.2"
+
+gem 'unicorn'
