@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140807032935) do
+=======
+ActiveRecord::Schema.define(version: 20140705160025) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "comments", force: true do |t|
     t.integer  "commentable_id",   default: 0
     t.string   "commentable_type"
@@ -36,6 +41,11 @@ ActiveRecord::Schema.define(version: 20140807032935) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "body"
+=======
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+>>>>>>> master
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

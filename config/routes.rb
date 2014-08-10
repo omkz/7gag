@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
  
   get 'comments/index'
 
@@ -11,6 +12,10 @@ Rails.application.routes.draw do
     end
   end
   
+=======
+  resources :posts
+
+>>>>>>> master
   devise_for :users
   
   get 'home/index'

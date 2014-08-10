@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def create
+<<<<<<< HEAD
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 
@@ -63,11 +64,27 @@ class PostsController < ApplicationController
     rescue ActiveRecord::RecordInvalid
       render js: "alert('vote down failed')"
     end
+=======
+    @post = Post.new post_params
+    @post.user_id = current_user.id
+
+    # p current_user.id
+
+    @post.save
+    redirect_to root_path
+>>>>>>> master
   end
 
 
   private
+<<<<<<< HEAD
   def post_params
     params.require(:post).permit(:title, :body, :meme)
   end
 end
+=======
+    def post_params
+      params.require(:post).permit(:title, :body, :meme)
+    end
+end
+>>>>>>> master
