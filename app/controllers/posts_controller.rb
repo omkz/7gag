@@ -62,14 +62,6 @@ class PostsController < ApplicationController
       render js: "alert('vote down failed')"
     end
 
-    @post = Post.new post_params
-    @post.user_id = current_user.id
-
-    # p current_user.id
-
-    @post.save
-    redirect_to root_path
-
   end
 
 
