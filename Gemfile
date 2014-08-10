@@ -46,7 +46,6 @@ gem 'devise'
 
 gem "paperclip", "~> 4.1"
 
-<<<<<<< HEAD
 gem 'social-share-button'
 
 group :development do
@@ -67,6 +66,3 @@ gem 'rails_12factor', group: :production
 
 ruby "2.1.2"
 
-# gem 'unicorn'
-=======
->>>>>>> master
