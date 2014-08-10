@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <% @posts.each do |post| %>
     <div class="panel panel-info">
       <div class="panel-heading">
@@ -21,25 +21,8 @@
       </div>
     </div>
 
-=======
+
+<% end %>
 <!--<h2>Selamat Datang di Ngakak.com</h2>-->
 <!--<p>Selamat menikmati beragam lelucon disini</p>-->
-
-<% Post.all.each do |p| %>
-
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= p.title %></h3>
-        <small>posted by : <%= User.where(id: p.user_id)  %></small>
-      </div>
-      <div class="panel-body">
-        <%= p.body %> <br />
-        <%= image_tag p.meme.url, class: 'meme'%>
-      </div>
-      <div class="panel-footer">facebook twitter comments</div>
-    </div>
-
-
->>>>>>> master
-<% end %>
 

@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-<<<<<<< HEAD
 
   acts_as_voter     # relationship :votes will be obscured by the same named relationship from acts_as_voteable :(
 
@@ -16,7 +15,4 @@ class User < ActiveRecord::Base
   # Karma by default is only calculated from upvotes. If you pass an array to the weight option, you can count downvotes as well (below, downvotes count for half as much karma against you):
   has_karma :posts, :as => :user, :weight => [ 1, 1 ]
 
-=======
-         
->>>>>>> master
 end

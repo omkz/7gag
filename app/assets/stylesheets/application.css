@@ -15,23 +15,20 @@
  *= require_self
  */
 
-<<<<<<< HEAD
-.inline{
+.inline {
     /*display: inline;*/
     /*position: relative;*/
-=======
+}
+
 .meme{
     max-width: 300px;
     max-height: auto;
 
 }
 
->>>>>>> master
+/*display: inline-block;*/
 
-    display: inline-block;
-
-}
-
+/*}*/
 
 a {
     /*display: inline;*/
