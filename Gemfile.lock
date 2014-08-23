@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: e8c1dc8a26183cf10e5eac7fb29eb7bdcf51d01f
+  specs:
+    paperclip (4.2.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
+
+GIT
   remote: https://github.com/vinnividivicci/acts_as_commentable_with_threading.git
   revision: 5fc2c2c38cc06e45a45957c4ff2abce1adf28c3a
   specs:
@@ -95,11 +105,6 @@ GEM
     minitest (5.3.5)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
-    paperclip (4.1.1)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -196,7 +201,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.1)
+  paperclip!
   pg
   rails (= 4.1.1)
   rails_12factor

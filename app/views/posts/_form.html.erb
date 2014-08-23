@@ -1,0 +1,27 @@
+
+<%= form_for :post, :html => { :multipart => true } do |f| %>
+    <%# f.hidden_field :user %>
+
+
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </p>
+
+
+    <p>
+      <%= f.label "funny image" %>
+
+      <%= f.file_field :meme %>
+
+      <%# f.text_area :body,  :cols => 50, :rows => 10 %>
+
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
+
+

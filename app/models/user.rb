@@ -14,5 +14,8 @@ class User < ActiveRecord::Base
   # has_karma :posts, :as => :user, :weight => 0.5
   # Karma by default is only calculated from upvotes. If you pass an array to the weight option, you can count downvotes as well (below, downvotes count for half as much karma against you):
   has_karma :posts, :as => :user, :weight => [ 1, 1 ]
+  
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 end

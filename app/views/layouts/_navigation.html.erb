@@ -8,27 +8,39 @@
         <span class="icon-bar"></span>
       </button>
       <!-- <a class="" href="#">Ngakak.com</a> -->
-	 <%= link_to "NGakak.com", root_path, :class => 'navbar-brand' %>
+      <%= link_to "NGakak.com", root_path, :class => 'navbar-brand' %>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <!--<li class="active"><a href="#">Hot</a></li>-->
         <li class="active"><a href="#trending">Trending</a></li>
         <li><a href="#fresh">Fresh</a></li>
-	   <li><a href="#friends">Friends</a></li>
+        <li><a href="#friends">Friends</a></li>
+        <li>
 
+        </li>
       </ul>
+
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search . . .">
         </div>
         <!--<button type="submit" class="btn btn-default">Submit</button>-->
+        <!--<button type="" class="btn btn-primary btn-sm">Upload Meme</button>-->
+
       </form>
+
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button class="btn btn-info" data-toggle="modal" data-target="#myModal">
+            Upload Joke
+          </button>
+        </li>
 
         <% if user_signed_in? %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <%= image_tag current_user.avatar.url(:thumb), height: 20, width: 20 %>   
                 Logged in as <strong><%= current_user.email %></strong>
                 <span class="badge"><%= current_user.karma + 10 %></span>
                 <span class="caret"></span></a>
@@ -38,18 +50,47 @@
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
-                <li><%= link_to 'Edit profile', edit_user_registration_path%></li>
-                <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+                <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
               </ul>
             </li>
 
         <% else %>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Sign up", new_user_registration_path  %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
               <li><%= link_to "Login", new_user_session_path %></li>
             </ul>
         <% end %>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Upload Funny things</h4>
+      </div>
+      <div class="modal-body">
+        <% if user_signed_in? %>
+            <%= render "posts/form" %>
+        <% else %>
+            silahkan login login
+            <%# render "devise/registrations" %>
+        <% end %>
+      </div>
+
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      <!--</div>-->
+    </div>
   </div>
 </div>
