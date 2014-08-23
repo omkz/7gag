@@ -11,14 +11,13 @@
       <%= link_to "NGakak.com", root_path, :class => 'navbar-brand' %>
     </div>
     <div class="navbar-collapse collapse">
+
       <ul class="nav navbar-nav">
         <!--<li class="active"><a href="#">Hot</a></li>-->
         <li class="active"><a href="#trending">Trending</a></li>
         <li><a href="#fresh">Fresh</a></li>
         <li><a href="#friends">Friends</a></li>
-        <li>
 
-        </li>
       </ul>
 
       <form class="navbar-form navbar-left" role="search">
@@ -31,10 +30,14 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
+
         <li>
-          <button class="btn btn-info" data-toggle="modal" data-target="#myModal">
+          <!-- <button class="btn btn-info" data-toggle="modal" data-target="#myModal">
             Upload Joke
-          </button>
+          </button> -->
+          <!--<a href="#" class="btn btn-primary btn-xs active" role="button">Primary link</a>-->
+          <!--<a href="#" class="btn btn-default btn-xs active" role="button">Link</a>-->
+		<a href="#" class="btn btn-default btn-xs" role="button" data-toggle="modal" data-target="#myModal">Upload a Joke</a>
         </li>
 
         <% if user_signed_in? %>
@@ -76,7 +79,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Upload Funny things</h4>
+        <h4 class="modal-title" id="myModalLabel">Upload a Funny thing</h4>
       </div>
       <div class="modal-body">
         <% if user_signed_in? %>
