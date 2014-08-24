@@ -44,6 +44,10 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'social-share-button'

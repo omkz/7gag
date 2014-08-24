@@ -1,7 +1,8 @@
 <%# @old_comments.each do |comment| %>
 <div class="media" style="background-color: white; padding: 5px ">
   <a class="pull-left" href="#">
-    <img class="media-object" src="/assets/monki64.png" alt="...">
+    <!--<img class="media-object" src="/assets/monki64.png" alt="...">-->
+    <%= image_tag comment.user.avatar.url(:thumb), height: 64, width: 64 %>
   </a>
 
   <div class="media-body">
