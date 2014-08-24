@@ -15,6 +15,13 @@
  *= require_self
  */
 
+body{
+    /*background-color: #eed3d7;*/
+}
+
+.lightblue{
+    background-color: lightblue
+}
 .inline {
     /*display: inline;*/
     /*position: relative;*/
